@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Food from "../../images/food.jpg";
 
 function MealResults() {
+  useEffect(() => {
+    fetchMeal();
+  }, []);
+  const fetchMeal = async () => {
+    const response = await axios
+      .get("www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
+      .then((response) => {
+        console.log(response.data);
+      });
+  };
   return (
     <div className="mx-4 ">
       <h3 className="text-4xl md:text-4xl font-bold mb-3 leading-normal">
