@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .container-one {
-  max-width: 1200px !important;
+  max-width: 1150px !important;
   margin: auto !important;
 }

@@ -7,17 +7,15 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <div className="container-one">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<NotFound />} />
-          <Route path="/notfound" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} />
+        <Route path="/notfound" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
