@@ -7,12 +7,17 @@ function MealResults() {
   useEffect(() => {
     fetchMeal();
   }, []);
+
   const fetchMeal = async () => {
-    const response = await axios
-      .get("www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
-      .then((response) => {
-        console.log(response.data);
-      });
+    try {
+      const response = await axios
+        .get("www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
+        .then((response) => {
+          console.log(response.data);
+        });
+    } catch (error) {
+      console.error("error in fetching ", message.error);
+    }
   };
   return (
     <div className="mx-4 ">
