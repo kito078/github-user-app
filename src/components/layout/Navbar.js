@@ -32,6 +32,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import SearchMeal from "../Meals/SearchMeal";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +51,7 @@ function Navbar() {
             </Link>
           </div> */}
           {/* Search */}
-          <h4>Search menu</h4>
+          <SearchMeal />
           {/* Menu Items */}
           <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
             <Link to="/" className="tracking-widest hover:text-softRed">
