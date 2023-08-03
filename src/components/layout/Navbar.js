@@ -58,13 +58,22 @@ function Navbar() {
           <SearchMeal />
           {/* Menu Items */}
           <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
-            <Link to="/" className="tracking-widest hover:text-softRed">
+            <Link
+              to="/"
+              className="tracking-widest hover:text-softRed text-1xl"
+            >
               Home |
             </Link>
-            <Link to="/about" className="tracking-widest hover:text-softRed">
+            <Link
+              to="/about"
+              className="tracking-widest hover:text-softRed text-1xl"
+            >
               About |
             </Link>
-            <a href="#services" className="tracking-widest hover:text-softRed">
+            <a
+              href="#services"
+              className="tracking-widest hover:text-softRed text-1xl"
+            >
               Services |
             </a>
 

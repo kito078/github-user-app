@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchMeal() {
   return (
-    <form className="w-96 mr-6">
+    <form className="w-56 lg:w-96 mr-6">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
