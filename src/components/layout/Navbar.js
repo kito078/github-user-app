@@ -47,16 +47,9 @@ function Navbar() {
         {/* flex container for Nav Items */}
         <div className="flex items-center justify-between space-x-20 my-2">
           {/* logo */}
-          {/* <div className="flex z-30  hidden lg:block">
-            <DiGrails className="inline pr-2 text-3xl" />
-            <Link to="/" id="logo" className="tracking-widest ">
-              <h5 id="logo" className="text-lg font-bold align-middle">
-                MealsDay
-              </h5>
-            </Link>
-          </div> */}
-          <div className="flex-none px-2 mx-2">
-            <FaGithub className="inline pr-2 text-3xl" />
+
+          <div className="flex-none  hidden lg:block px-2 mx-2">
+            <DiGrails className="inline pr-2 text-4xl" />
             <Link to="/" className="text-lg font-bold align-middle">
               MealDay
             </Link>
