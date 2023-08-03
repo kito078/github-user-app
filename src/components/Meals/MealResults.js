@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Food from "../../images/food.jpg";
+import axios from "axios";
 
 function MealResults() {
   useEffect(() => {
