@@ -33,7 +33,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import SearchMeal from "../Meals/SearchMeal";
-import { LiaFortAwesomeAlt } from "react-icons/li";
+import { FaBeer } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ function Navbar() {
         <div className="flex items-center justify-between space-x-20 my-2">
           {/* logo */}
           <div className="z-30 hidden lg:block">
-            <LiaFortAwesomeAlt className="inline pr-2 text-3xl" />
+            <FaBeer className="inline pr-2 text-3xl" />
             <Link to="/" id="logo" className="tracking-widest ">
               <h5 id="logo">MealsDay</h5>
             </Link>
