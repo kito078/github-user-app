@@ -35,6 +35,7 @@ import { Link } from "react-router-dom";
 import SearchMeal from "../Meals/SearchMeal";
 import { DiGrails } from "react-icons/di";
 import { FaGithub } from "react-icons/fa";
+import Dropback from "./Dropback";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,12 +71,12 @@ function Navbar() {
             >
               About |
             </Link>
-            <a
-              href="#services"
+            <Link
+              to="/about"
               className="tracking-widest hover:text-softRed text-1xl"
             >
-              Services |
-            </a>
+              <Dropback />
+            </Link>
 
             {/* <a
                 href=""
@@ -117,9 +118,7 @@ function Navbar() {
             </a>
           </div>
           <div className="w-full py-3 text-center">
-            <a href="#services" className="block hover:text-softRed">
-              Services
-            </a>
+            <Dropback />
           </div>
         </div>
       </div>
