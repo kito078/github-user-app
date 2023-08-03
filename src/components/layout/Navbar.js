@@ -60,6 +60,12 @@ function Navbar() {
           {/* Menu Items */}
           <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
             <Link
+              to="/about"
+              className="tracking-widest hover:text-softRed text-1xl tex-center"
+            >
+              <Dropback />
+            </Link>
+            <Link
               to="/"
               className="tracking-widest hover:text-softRed text-1xl"
             >
@@ -71,20 +77,6 @@ function Navbar() {
             >
               About |
             </Link>
-            <Link
-              to="/about"
-              className="tracking-widest hover:text-softRed text-1xl tex-center"
-            >
-              <Dropback />
-            </Link>
-
-            {/* <a
-                href=""
-                className="px-8 py-2 text-white bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-white
-              "
-              >
-                download
-              </a> */}
           </div>
           {/* hamburger Button */}
           <button
