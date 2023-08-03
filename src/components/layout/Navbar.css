@@ -3,7 +3,7 @@
 .hamburger {
   cursor: pointer;
   width: 24px;
-  height: 24px;
+  height: 30px;
   transition: all 0.25s;
   position: relative;
 }
@@ -17,6 +17,7 @@
   height: 3px;
   top: 0;
   left: 0;
+  margin-top: 0.5rem;
   /* background: #000; */
   background: #fff;
   transform: rotate(0);
@@ -37,7 +38,7 @@
   transform: rotate(90deg);
   transform: translateY(0px);
   position: fixed;
-  top: 50px;
+  /* top: 50px; */
   right: 25px;
 }
 
