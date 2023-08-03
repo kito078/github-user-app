@@ -10,13 +10,13 @@ function MealResults() {
 
   const fetchMeal = async () => {
     try {
-      const response = await axios
-        .get("www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
-        .then((response) => {
-          console.log(response.data);
-        });
+      const response = await axios.get(
+        "www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
+      );
+
+      console.log(response.data);
     } catch (error) {
-      console.error("error in fetching ", message.error);
+      console.error("error in fetching ", error.message);
     }
   };
   return (
