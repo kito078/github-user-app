@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchMeal() {
   return (
-    <form className="w-96">
+    <form className="w-96 mr-6">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -50,7 +50,7 @@ function SearchMeal() {
 
         <button
           type="submit"
-          class="text-white absolute right-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-700  focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800"
+          class="hidden text-white absolute right-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-700  focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800"
         >
           go
         </button>

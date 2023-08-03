@@ -33,6 +33,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import SearchMeal from "../Meals/SearchMeal";
+import { LiaFortAwesomeAlt } from "react-icons/li";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,16 +41,17 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="mb-12 shadow-lg bg-neutral relative mx-auto p-2">
+    <nav className="mb-12 shadow-lg bg-neutral relative mx-auto p-2 px-6">
       <div className="container-one">
         {/* flex container for Nav Items */}
-        <div className="flex items-center justify-between space-x-20 my-6">
+        <div className="flex items-center justify-between space-x-20 my-2">
           {/* logo */}
-          {/* <div className="z-30">
+          <div className="z-30 hidden lg:block">
+            <LiaFortAwesomeAlt className="inline pr-2 text-3xl" />
             <Link to="/" id="logo" className="tracking-widest ">
               <h5 id="logo">MealsDay</h5>
             </Link>
-          </div> */}
+          </div>
           {/* Search */}
           <SearchMeal />
           {/* Menu Items */}

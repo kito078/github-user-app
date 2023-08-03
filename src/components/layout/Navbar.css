@@ -54,3 +54,7 @@
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
   background-color: #fff;
 }
+
+.space-x-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: none !important;
+}
