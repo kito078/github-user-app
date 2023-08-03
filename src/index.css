@@ -6,3 +6,7 @@
   max-width: 1150px !important;
   margin: auto !important;
 }
+
+body {
+  box-sizing: border-box !important;
+}

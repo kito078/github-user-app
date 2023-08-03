@@ -23,21 +23,8 @@ function MealResults() {
           Meals{" "}
         </Link>
       </div>
-      <div>
-        <div class="group item w-96">
-          {/* Desktop Image  */}
-          <img
-            src={strMealThumb}
-            alt=""
-            class="w-full h-80 object-cover duration-200 md:block group-hover:scale-110"
-          />
-          {/* Mobile Image  */}
-          <img src={Food} alt="" class="w-full md:hidden" />
-          {/* Item Gradient  */}
-          <div class="item-gradient"></div>
-          {/* Item Text  */}
-          <h5>Night Arcade</h5>
-        </div>
+      <div className="mt-6 h-96">
+        <img className="w-full h-96 object-cover" src={Food} alt="" />
       </div>
     </div>
   );
