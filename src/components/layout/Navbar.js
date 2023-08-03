@@ -73,7 +73,7 @@ function Navbar() {
             </Link>
             <Link
               to="/about"
-              className="tracking-widest hover:text-softRed text-1xl"
+              className="tracking-widest hover:text-softRed text-1xl tex-center"
             >
               <Dropback />
             </Link>
