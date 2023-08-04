@@ -1,5 +1,6 @@
 import React from "react";
 import Food from "../../images/food.jpg";
+import { Link } from "react-router-dom";
 
 function MealItem() {
   return (
