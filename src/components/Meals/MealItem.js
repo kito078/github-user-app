@@ -26,7 +26,9 @@ function MealItem({ meal }) {
             </div>
           </div>
           <div>
-            <AiTwotoneHeart className="text-3xl" />
+            <div className="w-10 h-16 bg-white rounded-[32px]">
+              <AiTwotoneHeart className="text-3xl" />
+            </div>
           </div>
         </div>
       </div>
