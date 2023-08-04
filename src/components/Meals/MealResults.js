@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import Popular from "../layout/Popular";
 import MealItem from "./MealItem";
 
 function MealResults() {
+  const [meals, setMeals] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetchMeal();
   }, []);
@@ -15,7 +17,7 @@ function MealResults() {
       const response = await axios.get(
         "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"
       );
-      console.log(response.data);
+      setMeals(response.data.meals);
     } catch (error) {
       console.error("error in fetching ", error.message);
     }
@@ -23,7 +25,9 @@ function MealResults() {
   return (
     <div className="mx-4 ">
       <Popular />
-      <MealItem />
+      {meals.map((meal) => (
+        <MealItem key={meal.idMeal} meal={meal} />
+      ))}
     </div>
   );
 }
