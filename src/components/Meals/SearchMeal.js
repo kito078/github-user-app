@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 function SearchMeal() {
+  const [text, setText] = useState("");
+  console.log(text);
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    setText(e.target.value);
+  };
+
   return (
-    <form className="w-96">
+    <form onSubmit={onSubmitHandler} className="w-96">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium  sr-only text-white"
@@ -27,6 +35,8 @@ function SearchMeal() {
         </div>
 
         <input
+          onChange={setText}
+          value={text}
           type="search"
           id="default-search"
           class="block w-full ml-2 p-3 pl-10 text-sm  border 
