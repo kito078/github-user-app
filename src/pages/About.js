@@ -3,7 +3,7 @@ import MealResults from "../components/Meals/MealResults";
 
 function About() {
   return (
-    <div className="containerone">
+    <div className="container-one">
       <h1>about</h1>
     </div>
   );
