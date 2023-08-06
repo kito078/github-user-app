@@ -32,16 +32,16 @@ function Dropback() {
       {/* Dropdown menu  */}
       <div
         id="dropdown"
-        class="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+        class="z-10 absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44 "
       >
         <ul
-          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+          class="py-2 text-sm text-gray-200"
           aria-labelledby="dropdownDefaultButton"
         >
           <li>
             <a
               href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
             >
               Dashboard
             </a>
@@ -49,7 +49,7 @@ function Dropback() {
           <li>
             <a
               href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
             >
               Settings
             </a>
@@ -57,7 +57,7 @@ function Dropback() {
           <li>
             <a
               href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
             >
               Earnings
             </a>
@@ -65,7 +65,7 @@ function Dropback() {
           <li>
             <a
               href="#"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
             >
               Sign out
             </a>
