@@ -8,31 +8,6 @@ function MealItem({ meal }) {
   console.log(meal);
   const { strMeal, strMealThumb } = meal;
   return (
-    // <div>
-    //   <div className="mt-6 h-96 ">
-    //     <img
-    //       className="w-full h-96 object-cover rounded-[32px] "
-    //       src={strMealThumb}
-    //       alt=""
-    //     />
-    //     <div className="flex justify-between items-center mx-3">
-    //       <div>
-    //         <h3 className="text-2xl font-bold mb-3">Clumsies Bar</h3>
-    //         <div className="flex justify-items-center items-center">
-    //           <span>
-    //             <FaCreativeCommonsPdAlt className="text-lg" />
-    //           </span>
-    //           <span className="ml-2">8 Awe SW Colgory</span>
-    //         </div>
-    //       </div>
-    //       <div>
-    //         <div className="w-10 h-16 bg-white rounded-[32px] flex items-center justify-center">
-    //           <AiTwotoneHeart className="text-3xl text-orange-500" />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="mb-32">
       <div className="mt-6 h-96 relative">
         <img

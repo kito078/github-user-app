@@ -3,8 +3,8 @@ import MealResults from "../components/Meals/MealResults";
 
 function About() {
   return (
-    <div className="container-one">
-      <MealResults />
+    <div className="containerone">
+      <h1>about</h1>
     </div>
   );
 }

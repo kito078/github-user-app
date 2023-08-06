@@ -5,12 +5,12 @@ function SearchMeal() {
     <form className="w-96">
       <label
         for="default-search"
-        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        class="mb-2 text-sm font-medium  sr-only text-white"
       ></label>
       <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg
-            class="w-4 h-4 ml-4 text-gray-500 dark:text-gray-400"
+            class="w-4 h-4 ml-4  text-gray-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,18 +29,18 @@ function SearchMeal() {
         <input
           type="search"
           id="default-search"
-          class="block w-full ml-2 p-3 pl-10 text-sm text-gray-900 border 
-  border-gray-300 rounded-[21px] bg-gray-50 focus:ring-blue-500 
-  focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
-  dark:placeholder-gray-400 dark:text-white focus:outline-none
-  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block w-full ml-2 p-3 pl-10 text-sm  border 
+   rounded-[21px]  
+   bg-gray-700 border-gray-600
+  placeholder-gray-400 text-white focus:outline-none
+  focus:ring-blue-500 "
           placeholder="Search Meals..."
           required
         />
 
         <button
           type="submit"
-          class="hidden text-white absolute right-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-700  focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800"
+          class="hidden text-white absolute right-2.5 bottom-2.5    font-medium rounded-lg text-sm px-4 py-2 bg-sky-600 hover:bg-sky-700 focus:ring-sky-800"
         >
           go
         </button>

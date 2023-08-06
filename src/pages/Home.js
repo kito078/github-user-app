@@ -3,7 +3,7 @@ import MealResults from "../components/Meals/MealResults";
 
 function Home() {
   return (
-    <div>
+    <div className="container-one">
       <MealResults />
     </div>
   );

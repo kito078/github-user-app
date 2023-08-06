@@ -8,6 +8,6 @@
 }
 
 body {
-  box-sizing: border-box !important;
+  overflow-y: scroll;
   background: #1d232a;
 }
