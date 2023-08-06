@@ -51,7 +51,10 @@ function Navbar() {
 
           <div className="flex-none  hidden lg:block px-2 mx-2">
             <DiGrails className="inline pr-2 text-4xl" />
-            <Link to="/" className="text-lg font-bold align-middle">
+            <Link
+              to="/"
+              className="text-lg text-gray-400 font-bold align-middle"
+            >
               MealDay
             </Link>
           </div>
@@ -67,13 +70,13 @@ function Navbar() {
             </Link>
             <Link
               to="/"
-              className="tracking-widest hover:text-softRed text-1xl"
+              className="tracking-widest text-gray-400 hover:text-softRed text-1xl"
             >
               Home |
             </Link>
             <Link
               to="/about"
-              className="tracking-widest hover:text-softRed text-1xl"
+              className="tracking-widest text-gray-400 hover:text-softRed text-1xl"
             >
               About |
             </Link>
@@ -100,16 +103,16 @@ function Navbar() {
           } fixed inset-0 z-20 md:hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue`}
         >
           <div className="w-full py-3 text-center">
-            <a href="#home" className="block hover:text-softRed">
+            <a href="#home" className="block text-gray-400 hover:text-softRed">
               Home
             </a>
           </div>
           <div className="w-full py-3 text-center">
-            <a href="#about" className="block hover:text-softRed">
+            <a href="#about" className="block text-gray-400 hover:text-softRed">
               About
             </a>
           </div>
-          <div className="w-full py-3 text-center">
+          <div className="w-full py-3 text-gray-400 text-center">
             <Dropback />
           </div>
         </div>

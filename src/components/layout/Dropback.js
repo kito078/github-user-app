@@ -10,9 +10,9 @@ function Dropback() {
           data-dropdown-toggle="dropdown"
           className="block hover:text-softRed flex align-center justify-items-center"
         >
-          <span>Category</span>{" "}
+          <span className="text-gray-400">Category</span>{" "}
           <svg
-            class="w-4 h-4 ml-2.5 mt-1"
+            class="w-4 h-4 ml-2.5 mt-1 text-gray-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
