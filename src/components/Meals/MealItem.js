@@ -8,15 +8,15 @@ function MealItem({ meal }) {
   console.log(meal);
   const { strMeal, strMealThumb } = meal;
   return (
-    <div className="mb-32">
+    <div className="">
       <div className="mt-6 h-96 relative">
         <img
           className="w-full h-96 object-cover rounded-[32px]"
           src={strMealThumb}
           alt=""
         />
-        <div className="absolute bottom-0 left-0 w-full p-3 mb-4 text-white">
-          <h3 className="text-2xl font-bold mb-3">Clumsies Bar</h3>
+        <div className="absolute bottom-0 left-0 w-76 p-3 mb-4 text-white">
+          <h3 className="text-2xl font-bold mb-3 ">{strMeal}</h3>
           <div className="flex justify-items-center items-center">
             <span>
               <FaCreativeCommonsPdAlt className="text-lg" />
