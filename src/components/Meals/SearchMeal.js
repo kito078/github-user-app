@@ -2,11 +2,15 @@ import React, { useState } from "react";
 
 function SearchMeal() {
   const [text, setText] = useState("");
-  console.log(text);
+  //console.log(text);
+
+  const onChangeHandler = (e) => {
+    console.log(e.target.value);
+    setText(e.target.value);
+  };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    setText(e.target.value);
   };
 
   return (
@@ -35,7 +39,7 @@ function SearchMeal() {
         </div>
 
         <input
-          onChange={setText}
+          onChange={onChangeHandler}
           value={text}
           type="search"
           id="default-search"
