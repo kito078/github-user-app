@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Popular() {
   return (
-    <div>
+    <div className="bg-decoration-zinc-900">
       <h3 className="text-4xl md:text-4xl font-bold mb-3 leading-normal">
         Unreal places to discover
       </h3>

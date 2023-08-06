@@ -23,7 +23,7 @@ function MealResults() {
     }
   };
   return (
-    <div className="mx-4 ">
+    <div className="mx-4 bg-black-600">
       <Popular />
       {meals.map((meal) => (
         <MealItem key={meal.idMeal} meal={meal} />
