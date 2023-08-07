@@ -1,5 +1,6 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import mealReducer from "./MealReducer";
+import axios from "axios";
 
 const MealContext = createContext();
 
@@ -8,7 +9,7 @@ export const MealProvider = ({ children }) => {
     meals: [],
   };
 
-  const [state, dispatch] = useReducer(mealReducer, initialState);
+  const [state, dispatch] = useReducer(initialState, mealReducer);
 
   //fetch meal
   useEffect(() => {
@@ -17,9 +18,10 @@ export const MealProvider = ({ children }) => {
 
   const fetchMeal = async () => {
     try {
-      const response = await axios.get(`${env.process}/search.php?s=chicken`);
+      const response = await axios.get(`${process.env}/search.php?s=chicken`);
       //setMeals(response.data.meals);
       const items = response.data.meals;
+      console.log(items);
       dispatch({
         type: "GET_MEALS",
         payload: items,
@@ -29,7 +31,11 @@ export const MealProvider = ({ children }) => {
     }
   };
 
-  return <MealContext>{children}</MealContext>;
+  return (
+    <MealContext.Provider value={{ meals: state.meals, fetchMeal }}>
+      {children}
+    </MealContext.Provider>
+  );
 };
 
 export default MealContext;

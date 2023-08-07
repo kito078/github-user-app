@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-import axios from "axios";
 import Popular from "../layout/Popular";
 import MealItem from "./MealItem";
+import MealContext from "../../context/MealContext";
 
 function MealResults() {
-  const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { meals, fetchMeal } = useContext(MealContext);
 
   return (
     <div className="mx-4 bg-black-600">
