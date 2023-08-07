@@ -11,6 +11,7 @@ function SearchMeal() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    
   };
 
   return (
