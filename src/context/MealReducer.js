@@ -9,3 +9,5 @@ const mealReducer = (state, action) => {
       return { state };
   }
 };
+
+export default mealReducer;

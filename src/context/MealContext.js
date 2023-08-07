@@ -9,7 +9,7 @@ export const MealProvider = ({ children }) => {
     meals: [],
   };
 
-  const [state, dispatch] = useReducer(initialState, mealReducer);
+  const [state, dispatch] = useReducer(mealReducer, initialState);
 
   //fetch meal
   useEffect(() => {
@@ -18,7 +18,7 @@ export const MealProvider = ({ children }) => {
 
   const fetchMeal = async () => {
     try {
-      const response = await axios.get(`${process.env}/search.php?s=chicken`);
+      const response = await axios.get(`${process.env}/search.php?s=Arrabiata`);
       //setMeals(response.data.meals);
       const items = response.data.meals;
       console.log(items);
