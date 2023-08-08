@@ -13,7 +13,7 @@ export const MealProvider = ({ children }) => {
 
   //fetch meal
   useEffect(() => {
-    fetchMeal();
+    fetchMeal("chicken");
   }, []);
 
   const fetchMeal = async (text) => {
