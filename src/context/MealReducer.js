@@ -9,10 +9,10 @@ const mealReducer = (state, action) => {
     case "SET_LOADNG":
       return {
         ...state,
-        loading: true,
+        loading: action.payload,
       };
     default:
-      return { state };
+      return state;
   }
 };
 

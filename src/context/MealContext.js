@@ -7,7 +7,7 @@ const MealContext = createContext();
 export const MealProvider = ({ children }) => {
   const initialState = {
     meals: [],
-    loading: false,
+    loading: true,
   };
 
   const [state, dispatch] = useReducer(mealReducer, initialState);
@@ -25,6 +25,7 @@ export const MealProvider = ({ children }) => {
       );
       //setMeals(response.data.meals);
       const items = response.data.meals;
+      setLoading();
       //console.log(items);
       if (items === null) {
         window.location = "/notfound";
@@ -42,7 +43,7 @@ export const MealProvider = ({ children }) => {
   const setLoading = () => {
     dispatch({
       type: "SET_LOADING",
-      payload: true,
+      payload: false,
     });
   };
 

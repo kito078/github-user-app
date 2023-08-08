@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { PuffLoader } from "react-spinners";
+// import { PuffLoader } from "react-spinners";
 import Popular from "../layout/Popular";
 import MealItem from "./MealItem";
 import MealContext from "../../context/MealContext";
@@ -8,7 +8,7 @@ function MealResults() {
   const { meals, loading, fetchMeal } = useContext(MealContext);
 
   if (loading) {
-    return <PuffLoader color="red" size={70} />;
+    return <h3 className="text-8xl">loading...</h3>;
   } else {
     return (
       <div className="mx-4 bg-black-600">
@@ -23,3 +23,7 @@ function MealResults() {
 }
 
 export default MealResults;
+
+{
+  /* <PuffLoader color="red" size={70} /> */
+}
