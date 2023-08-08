@@ -23,11 +23,15 @@ export const MealProvider = ({ children }) => {
       );
       //setMeals(response.data.meals);
       const items = response.data.meals;
-      console.log(items);
-      dispatch({
-        type: "GET_MEALS",
-        payload: items,
-      });
+      //console.log(items);
+      if (items === null) {
+        window.location = "/notfound";
+      } else {
+        dispatch({
+          type: "GET_MEALS",
+          payload: items,
+        });
+      }
     } catch (error) {
       console.error("error in fetching ", error.message);
     }
