@@ -7,9 +7,9 @@ import { FaCreativeCommonsPdAlt } from "react-icons/fa";
 function MealItem({ meal }) {
   console.log(meal);
   const { strMeal, strMealThumb, idMeal } = meal;
-  console.log(mealId);
+
   return (
-    <Link to={`meal/:${idMeal}`}>
+    <Link to={`meal/${idMeal}`}>
       <div className="mt-6 h-96 relative">
         <img
           className="w-full h-96 object-cover rounded-[32px]"

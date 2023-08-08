@@ -7,6 +7,7 @@ const MealContext = createContext();
 export const MealProvider = ({ children }) => {
   const initialState = {
     meals: [],
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(mealReducer, initialState);
@@ -18,6 +19,7 @@ export const MealProvider = ({ children }) => {
 
   const fetchMeal = async (text) => {
     try {
+      setLoading();
       const response = await axios.get(
         `${process.env.REACT_APP_URL}/search.php?s=${text}`
       );
@@ -37,8 +39,17 @@ export const MealProvider = ({ children }) => {
     }
   };
 
+  const setLoading = () => {
+    dispatch({
+      type: "SET_LOADING",
+      payload: true,
+    });
+  };
+
   return (
-    <MealContext.Provider value={{ meals: state.meals, fetchMeal }}>
+    <MealContext.Provider
+      value={{ meals: state.meals, loading: state.loading, fetchMeal }}
+    >
       {children}
     </MealContext.Provider>
   );
