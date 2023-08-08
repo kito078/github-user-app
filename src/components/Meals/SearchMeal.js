@@ -18,7 +18,7 @@ function SearchMeal() {
     e.preventDefault();
 
     fetchMeal(text);
-    navigate.push("/");
+    navigate("/");
   };
 
   return (
