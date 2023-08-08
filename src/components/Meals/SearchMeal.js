@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import MealContext from "../../context/MealContext";
+import { useNavigate } from "react-router-dom";
 
 function SearchMeal() {
   const [text, setText] = useState("");
+  const navigate = useNavigate();
   //console.log(text);
 
   const { fetchMeal } = useContext(MealContext);
@@ -16,6 +18,7 @@ function SearchMeal() {
     e.preventDefault();
 
     fetchMeal(text);
+    navigate.push("/");
   };
 
   return (
