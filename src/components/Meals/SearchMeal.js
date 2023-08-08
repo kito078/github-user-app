@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import MealContext from "../../context/MealContext";
 
 function SearchMeal() {
   const [text, setText] = useState("");
   //console.log(text);
+
+  const { fetchMeal } = useContext(MealContext);
 
   const onChangeHandler = (e) => {
     console.log(e.target.value);
@@ -11,7 +14,8 @@ function SearchMeal() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    
+
+    fetchMeal(text);
   };
 
   return (
