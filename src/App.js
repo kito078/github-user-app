@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Meal />} />
+          <Route path="/meal/:idMeal" element={<Meal />} />
           <Route path="/about" element={<About />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/notfound" element={<NotFound />} />
