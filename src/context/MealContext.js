@@ -19,7 +19,7 @@ export const MealProvider = ({ children }) => {
   const fetchMeal = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_URL}/search.php?s=Arrabiata`
+        `${process.env.REACT_APP_GITHUB_URL}/search.php?s=Arrabiata`
       );
       //setMeals(response.data.meals);
       const items = response.data.meals;
