@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Popular() {
   return (
     <div className="bg-decoration-zinc-900">
-      <h3 className="text-4xl md:text-4xl text-gray-400 font-bold mb-3 leading-normal">
+      <h3 className="text-4xl md:text-4xl text-gray-300 font-bold mb-3 leading-normal">
         Unreal places to discover
       </h3>
       <span className="text-xl ml-1 text-gray-400">Wednesday, Sep 21</span>

@@ -7,12 +7,13 @@ const MealContext = createContext();
 export const MealProvider = ({ children }) => {
   const initialState = {
     meals: [],
+    meal: [],
     loading: false,
   };
 
   const [state, dispatch] = useReducer(mealReducer, initialState);
 
-  //fetch meal
+  //FETCH MEAL
   useEffect(() => {
     fetchMeal("chicken");
   }, []);
@@ -40,6 +41,26 @@ export const MealProvider = ({ children }) => {
     }
   };
 
+  //GET MEAL
+  const getMeal = async () => {
+    try {
+      setLoading();
+      const response = await axios.get(
+        `${process.env.REACT_APP_URL}/lookup.php?i=52772`
+      );
+
+      const items = response.data.meals;
+      console.log(items);
+
+      dispatch({
+        type: "GET_MEAL",
+        payload: items,
+      });
+    } catch (error) {
+      console.error("error in fetching ", error.message);
+    }
+  };
+
   const setLoading = () => {
     dispatch({
       type: "SET_LOADING",
@@ -48,7 +69,13 @@ export const MealProvider = ({ children }) => {
 
   return (
     <MealContext.Provider
-      value={{ meals: state.meals, loading: state.loading, fetchMeal }}
+      value={{
+        meals: state.meals,
+        loading: state.loading,
+        meal: state.meal,
+        fetchMeal,
+        getMeal,
+      }}
     >
       {children}
     </MealContext.Provider>
