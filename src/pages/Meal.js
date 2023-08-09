@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useContext } from "react";
 import MealContext from "../context/MealContext";
 import { useParams } from "react-router-dom";
+import MealDetail from "../components/Meals/MealDetail";
 
 function Meal() {
   const { meal, getMeal } = useContext(MealContext);
@@ -15,7 +16,9 @@ function Meal() {
   console.log(meal);
   return (
     <div>
-      <h1>meal</h1>
+      {meal.map((item) => (
+        <MealDetail item={item} />
+      ))}
     </div>
   );
 }

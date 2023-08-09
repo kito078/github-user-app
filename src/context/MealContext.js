@@ -7,7 +7,7 @@ const MealContext = createContext();
 export const MealProvider = ({ children }) => {
   const initialState = {
     meals: [],
-    meal: [],
+    meal: {},
     loading: false,
   };
 
