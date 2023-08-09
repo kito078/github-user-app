@@ -50,7 +50,7 @@ export const MealProvider = ({ children }) => {
       );
 
       const items = response.data.meals;
-      // console.log(items);
+      console.log(items);
 
       dispatch({
         type: "GET_MEAL",
