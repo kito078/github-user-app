@@ -15,11 +15,7 @@ function Meal() {
 
   console.log(meal);
   return (
-    <div>
-      {meal.map((itemOne) => (
-        <MealDetail item={itemOne} />
-      ))}
-    </div>
+    <div>{meal && meal.map((itemOne) => <MealDetail item={itemOne} />)}</div>
   );
 }
 
