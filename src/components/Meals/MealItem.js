@@ -5,7 +5,7 @@ import { AiTwotoneHeart } from "react-icons/ai";
 import { FaCreativeCommonsPdAlt } from "react-icons/fa";
 
 function MealItem({ meal }) {
-  console.log(meal);
+  //console.log(meal);
   const { strMeal, strMealThumb, idMeal } = meal;
 
   return (

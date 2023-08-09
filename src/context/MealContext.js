@@ -42,15 +42,15 @@ export const MealProvider = ({ children }) => {
   };
 
   //GET MEAL
-  const getMeal = async () => {
+  const getMeal = async (idMeal) => {
     try {
       setLoading();
       const response = await axios.get(
-        `${process.env.REACT_APP_URL}/lookup.php?i=52772`
+        `${process.env.REACT_APP_URL}/lookup.php?i=${idMeal}`
       );
 
       const items = response.data.meals;
-      console.log(items);
+      // console.log(items);
 
       dispatch({
         type: "GET_MEAL",
