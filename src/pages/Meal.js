@@ -16,8 +16,8 @@ function Meal() {
   console.log(meal);
   return (
     <div>
-      {meal.map((item) => (
-        <MealDetail item={item} />
+      {meal.map((itemOne) => (
+        <MealDetail item={itemOne} />
       ))}
     </div>
   );
