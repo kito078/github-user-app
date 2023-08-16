@@ -7,12 +7,12 @@ function Dropback() {
 
   const options = ["rice", "beef", "chicken"];
 
-  const handleDropdownChange = (e) => {
-    //setSelectedOption(e.target.textContent);
-    setText(e.target.textContent);
-    console.log(text);
-    fetchMeal(text);
+  const handleDropdownChange = (text) => {
+    setText(text);
   };
+
+  fetchMeal(text);
+  console.log(text);
 
   return (
     <div>
@@ -56,7 +56,7 @@ function Dropback() {
               <a
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-                onClick={handleDropdownChange}
+                onClick={() => handleDropdownChange(option)}
               >
                 {option}
               </a>
