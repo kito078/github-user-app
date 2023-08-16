@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import MealContext from "../../context/MealContext";
 
 function Dropback() {
+  const [selectedOption, setSelectedOption] = useState("");
+  const { fetchMeal } = useContext(MealContext);
+
+  const options = ["rice", "meet", "beef", "chicken"];
+
+  const handleDropdownChange = (e) => {
+    setSelectedOption(e.target.textContent);
+    fetchMeal(e.target.textContent);
+  };
+
   return (
     <div>
       <div className="w-full py-3 text-center ">
@@ -12,7 +23,7 @@ function Dropback() {
         >
           <span className="text-gray-400">Category</span>{" "}
           <svg
-            class="w-4 h-4 ml-2.5 mt-1 text-gray-400"
+            className="w-4 h-4 ml-2.5 mt-1 text-gray-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -20,9 +31,9 @@ function Dropback() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m1 1 4 4 4-4"
             />
           </svg>
@@ -32,44 +43,23 @@ function Dropback() {
       {/* Dropdown menu  */}
       <div
         id="dropdown"
-        class="z-10 absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44 "
+        className="z-10 absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44"
       >
         <ul
-          class="py-2 text-sm text-gray-200"
+          className="py-2 text-sm text-gray-200"
           aria-labelledby="dropdownDefaultButton"
         >
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
-            >
-              breakfast
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
-            >
-              meat
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-            >
-              beef
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
-            >
-              chicken
-            </a>
-          </li>
+          {options.map((option, index) => (
+            <li key={index}>
+              <a
+                href="#"
+                className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                onClick={handleDropdownChange}
+              >
+                {option}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
@@ -77,3 +67,70 @@ function Dropback() {
 }
 
 export default Dropback;
+
+// import React, { useState } from "react";
+
+// function Dropback() {
+//   const [selectedOption, setSelectedOption] = useState("");
+
+//   const options = ["rice", "meet", "beef", "chicken"];
+
+//   const handleDropdownChange = (e) => {
+//     console.log(e.target.value);
+//   };
+
+//   return (
+//     <div>
+//       <div onChange={handleDropdownChange} className="w-full py-3 text-center ">
+//         <a
+//           href="#about"
+//           id="dropdownDefaultButton"
+//           data-dropdown-toggle="dropdown"
+//           className="block hover:text-softRed flex align-center justify-items-center"
+//         >
+//           <span className="text-gray-400">Category</span>{" "}
+//           <svg
+//             class="w-4 h-4 ml-2.5 mt-1 text-gray-400"
+//             aria-hidden="true"
+//             xmlns="http://www.w3.org/2000/svg"
+//             fill="none"
+//             viewBox="0 0 10 6"
+//           >
+//             <path
+//               stroke="currentColor"
+//               stroke-linecap="round"
+//               stroke-linejoin="round"
+//               stroke-width="2"
+//               d="m1 1 4 4 4-4"
+//             />
+//           </svg>
+//         </a>
+//       </div>
+
+//       {/* Dropdown menu  */}
+//       <div
+//         id="dropdown"
+//         class="z-10 absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44 "
+//       >
+//         <ul
+//           class="py-2 text-sm text-gray-200"
+//           aria-labelledby="dropdownDefaultButton"
+//         >
+//           {options.map((option, index) => (
+//             <li>
+//               <a
+//                 key={index}
+//                 href="#"
+//                 class="block px-4 py-2  hover:bg-gray-600 hover:text-white"
+//               >
+//                 {option}
+//               </a>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Dropback;
