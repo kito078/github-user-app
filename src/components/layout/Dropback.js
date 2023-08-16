@@ -1,18 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MealContext from "../../context/MealContext";
 
 function Dropback() {
   const [text, setText] = useState("");
   const { fetchMeal } = useContext(MealContext);
-
+  console.log(text);
   const options = ["rice", "beef", "chicken"];
 
   const handleDropdownChange = (text) => {
     setText(text);
+    fetchMeal(text);
   };
-
-  fetchMeal(text);
-  console.log(text);
 
   return (
     <div>
