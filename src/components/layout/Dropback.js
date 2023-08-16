@@ -5,7 +5,7 @@ function Dropback() {
   const [text, setText] = useState("");
   const { fetchMeal } = useContext(MealContext);
 
-  const options = ["rice", "meet", "beef", "chicken"];
+  const options = ["rice", "beef", "chicken"];
 
   const handleDropdownChange = (e) => {
     //setSelectedOption(e.target.textContent);
