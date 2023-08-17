@@ -63,7 +63,7 @@ function Navbar() {
           {/* Menu Items */}
           <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
             <Link
-              to="/about"
+              to="/"
               className="tracking-widest hover:text-softRed text-1xl tex-center"
             >
               <Dropback />

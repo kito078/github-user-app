@@ -3,13 +3,14 @@ import MealContext from "../../context/MealContext";
 
 function Dropback() {
   const [text, setText] = useState("chicken");
+  const [isOpen, setIsOpen] = useState(false);
   const { fetchMeal } = useContext(MealContext);
   // console.log(text);
-  const options = ["rice", "beef", "chicken"];
+  const options = ["breakfast", "pork", "cheese", "Vegetarian"];
 
   const handleDropdownChange = (text) => {
     setText(text);
-    fetchMeal();
+    fetchMeal(text);
   };
 
   return (
@@ -43,10 +44,10 @@ function Dropback() {
       {/* Dropdown menu  */}
       <div
         id="dropdown"
-        className="z-10 absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44"
+        className="z-10 hidden absolute bg-gray-700 divide-y divide-gray-100 rounded-lg shadow w-44"
       >
         <ul
-          className="py-2 text-sm text-gray-200"
+          className="py-2 text-sm font-semibold text-gray-200"
           aria-labelledby="dropdownDefaultButton"
         >
           {options.map((option, index) => (
