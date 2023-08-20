@@ -4,7 +4,7 @@ import SearchMeal from "../Meals/SearchMeal";
 
 function Popular() {
   return (
-    <div className="bg-decoration-zinc-900 my-20  text-center flex flex-col items-center justify-center">
+    <div className="bg-decoration-zinc-900 my-28  text-center flex flex-col items-center justify-center">
       <h3 className="text-4xl mb-8 md:text-7xl text-gray-300 text-center font-bold mb-3 leading-normal">
         Unreal places to discover
       </h3>
