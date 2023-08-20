@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import { MealProvider } from "./context/MealContext";
 import Meal from "./pages/Meal";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
           <Route path="/notfound" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
     </MealProvider>
   );
