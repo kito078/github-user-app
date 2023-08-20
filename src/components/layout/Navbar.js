@@ -59,7 +59,7 @@ function Navbar() {
             </Link>
           </div>
           {/* Search */}
-          <SearchMeal />
+
           {/* Menu Items */}
           <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
             <Link

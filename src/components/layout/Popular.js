@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchMeal from "../Meals/SearchMeal";
 
 function Popular() {
   return (
-    <div className="bg-decoration-zinc-900 text-center">
-      <h3 className="text-4xl md:text-6xl text-gray-300 text-center font-bold mb-3 leading-normal">
+    <div className="bg-decoration-zinc-900 my-20  text-center flex flex-col items-center justify-center">
+      <h3 className="text-4xl mb-8 md:text-7xl text-gray-300 text-center font-bold mb-3 leading-normal">
         Unreal places to discover
       </h3>
 
-      <p className="text-gray-500 text-xl md:text-2xl">
+      <p className="text-gray-500 mb-8 text-xl md:text-2xl">
         Find great places to stay, eat, shop, or visit from local experts.
       </p>
+      <SearchMeal />
     </div>
   );
 }
