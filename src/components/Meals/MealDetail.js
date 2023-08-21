@@ -19,7 +19,10 @@ function MealDetail({ item }) {
     strIngredient12,
     strIngredient11,
   } = item;
-  console.log(strYoutube);
+
+  const youTube = strYoutube.split(" ");
+  console.log(youTube);
+
   return (
     <div className="container-one ">
       <div className="flex flex-col mx-6 md:flex-row  gap-20 justify-between">
