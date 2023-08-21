@@ -22,7 +22,7 @@ function SearchMeal() {
   };
 
   return (
-    <form onSubmit={onSubmitHandler} className="w-96">
+    <form onSubmit={onSubmitHandler} className="">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium  sr-only text-white"
@@ -52,7 +52,7 @@ function SearchMeal() {
             value={text}
             type="search"
             id="default-search"
-            class=" w-64  md:w-full   p-5 pl-12 text-sm  border 
+            class="w-72 sm:w-96 p-5 pl-12 text-sm  border 
              rounded-[30px]  
              bg-gray-700 border-gray-600
             placeholder-gray-400 text-white focus:outline-none 

@@ -12,18 +12,15 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="mb-12 shadow-lg  relative mx-auto p-2 px-6">
-      <div className="container-one">
+    <nav className="mb-12 shadow-lg  z-10 relative  mx-auto p-2 px-6">
+      <div className="container-one bg-black fixed top-0 left-4 right-4">
         {/* flex container for Nav Items */}
-        <div className="flex items-center  justify-between space-x-20 my-2">
+        <div className="flex items-center py-6  justify-between space-x-20 my-2">
           {/* logo */}
 
-          <div className="flex-none lg:block px-2 mx-2 bg-gray-800">
+          <div className="flex-none lg:block px-2 mx-2 ">
             <DiGrails className="inline pr-2 text-4xl text-orange-500" />
-            <Link
-              to="/"
-              className="text-lg text-gray-400 font-bold align-middle"
-            >
+            <Link to="/" className="text-lg text-white font-bold align-middle">
               MealDay
             </Link>
           </div>
@@ -36,19 +33,19 @@ function Navbar() {
           >
             <Link
               to="/"
-              className="tracking-widest hover:text-softRed text-sm tex-center"
+              className="tracking-widest  hover:text-softRed text-sm tex-center"
             >
               <Dropback />
             </Link>
             <Link
               to="/"
-              className="tracking-widest text-gray-400 hover:text-softRed text-lg"
+              className="tracking-widest text-white hover:text-softRed text-sm"
             >
               Home |
             </Link>
             <Link
               to="/about"
-              className="tracking-widest text-gray-400 hover:text-softRed text-sm"
+              className="tracking-widest text-white hover:text-softRed text-sm"
             >
               About |
             </Link>
@@ -57,8 +54,8 @@ function Navbar() {
           <button
             id="menu-btn"
             className={`${
-              isOpen ? "open" : "block"
-            } z-30  md:hidden focus:outline-none hamburger`}
+              isOpen ? "open" : "block "
+            } z-30  md:hidden focus:outline-none  hamburger`}
             onClick={toggleHandler}
           >
             {/* humburger lines */}
@@ -74,8 +71,8 @@ function Navbar() {
             isOpen ? "flex" : "hidden"
           } fixed inset-0 z-20 text-sm md:hidden mx-auto flex-col justify-items-center
           items-center self-end w-full h-full m-h-screen px-6
-           py-1 pt-24 pb-4 tracking-widest text-white uppercase 
-           divide-y divide-gray-500 opacity-90 bg-gray-800`}
+           py-1 pt-24 pb-4 tracking-widest text-white uppercase bg-gray-800
+           divide-y divide-gray-500 opacity-90 `}
         >
           <div className="w-full py-3 text-center">
             <a href="#home" className="block text-sm text-white text-bold">
