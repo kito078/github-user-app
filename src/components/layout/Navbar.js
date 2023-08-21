@@ -11,6 +11,10 @@ function Navbar() {
   const toggleHandler = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleNavbar = () => {
+    setIsOpen(false);
+  };
   return (
     <nav className="mb-12 shadow-lg  z-10 relative  mx-auto p-2 px-6">
       <div className="container-one bg-black fixed top-0 left-4 right-4">
@@ -66,6 +70,7 @@ function Navbar() {
         </div>
         {/* Mobile Menu */}
         <div
+          onClick={handleNavbar}
           id="menu"
           className={`${
             isOpen ? "flex" : "hidden"
@@ -80,9 +85,9 @@ function Navbar() {
             </a>
           </div>
           <div className="w-full py-3 text-center">
-            <a href="#about" className="block text-sm text-bold text-white ">
+            <Link to="/about" className="block text-sm text-bold text-white ">
               About
-            </a>
+            </Link>
           </div>
           <div className="w-full py-3 text-white text-bold text-sm text-center">
             <Dropback />
