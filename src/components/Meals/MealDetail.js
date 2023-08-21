@@ -20,8 +20,33 @@ function MealDetail({ item }) {
     strIngredient11,
   } = item;
 
-  const youTube = strYoutube.split(" ");
-  console.log(youTube);
+  //first split the sentence so that t words so that u can be able to accest each word
+  const wordsInArray = strInstructions.split(" ");
+  console.log(wordsInArray);
+
+  //define number of words u want to keep
+  const wordsToKeep = 60;
+
+  //Extract the desired words u using slice
+  const cutWordsArray = wordsInArray.slice(0, wordsToKeep);
+
+  //join the words back into a sentence
+  const cutSentence = cutWordsArray.join(" ");
+
+  //extracting the id from youtube url
+
+  // Input YouTube URL
+  var youtubeUrl = strYoutube;
+
+  // Create a URL object
+  var url = new URL(youtubeUrl);
+
+  // Extract the video ID from the query parameter
+  var videoId = url.searchParams.get("v");
+
+  console.log(videoId);
+
+  const tuy = "QqdcCHQlOe0";
 
   return (
     <div className="container-one ">
@@ -38,7 +63,7 @@ function MealDetail({ item }) {
             <span className="text-orange-500">Meal </span>Description
           </h3>
           <p className="text-gray-500 mt-4 text-xl md:text-xl ">
-            {strInstructions} etc.
+            {cutSentence} etc.
           </p>
           <div>
             <h3 className="text-3xl md:text-3xl text-gray-200 font-bold mb-6 md:mt-20">
@@ -54,7 +79,7 @@ function MealDetail({ item }) {
           <div className="flex justify-center items-center h-screen">
             <iframe
               className="w-full h-3/4"
-              src="https://www.youtube.com/embed/MWzxDFRtVbc" // Use the video ID
+              src={`https://www.youtube.com/embed/${videoId}`} // Use the video ID
               title="YouTube Video"
               allowFullScreen
             ></iframe>
