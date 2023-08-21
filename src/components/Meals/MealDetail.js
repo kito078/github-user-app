@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function MealDetail({ item }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const {
     strCategory,
     strInstructions,
@@ -49,10 +53,10 @@ function MealDetail({ item }) {
   const tuy = "QqdcCHQlOe0";
 
   return (
-    <div className="container-one ">
-      <div className="flex flex-col mx-6 md:flex-row  gap-20 justify-between">
+    <div className="container-one mt-32">
+      <div className="flex flex-col mx-6 md:flex-row mt-32  gap-20 justify-between">
         <div>
-          <h3 className="text-3xl md:text-5xl text-gray-200 font-bold mb-6">
+          <h3 className="text-3xl md:text-5xl text-gray-200  font-bold mb-6">
             <span className="whitespace-nowrap">Delicious {strCategory}</span>{" "}
             Recipes
           </h3>
