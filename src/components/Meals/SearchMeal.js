@@ -52,7 +52,7 @@ function SearchMeal() {
             value={text}
             type="search"
             id="default-search"
-            class="block w-full md:w-1/2 lg:w-1/3 xl:w-1/4 ml-2 p-5 pl-12 text-sm  border 
+            class="block w-full  ml-2 p-5 pl-12 text-sm  border 
              rounded-[30px]  
              bg-gray-700 border-gray-600
             placeholder-gray-400 text-white focus:outline-none 
