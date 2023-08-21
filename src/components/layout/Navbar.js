@@ -50,7 +50,7 @@ function Navbar() {
           {/* logo */}
 
           <div className="flex-none  hidden lg:block px-2 mx-2">
-            <DiGrails className="inline pr-2 text-4xl" />
+            <DiGrails className="inline pr-2 text-4xl text-orange-500" />
             <Link
               to="/"
               className="text-lg text-gray-400 font-bold align-middle"

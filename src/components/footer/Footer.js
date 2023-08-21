@@ -1,4 +1,5 @@
 import React from "react";
+import { DiGrails } from "react-icons/di";
 
 function Footer() {
   return (
@@ -9,11 +10,7 @@ function Footer() {
             href="https://flowbite.com/"
             class="flex items-center mb-4 sm:mb-0"
           >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-8 mr-3"
-              alt="Flowbite Logo"
-            />
+            <DiGrails className="inline pr-2 text-4xl text-orange-500" />
             <span class="self-center text-2xl font-semibold text-gray-200 whitespace-nowrap ">
               MealDay
             </span>
@@ -45,7 +42,7 @@ function Footer() {
         <span class="block text-sm  sm:text-center text-gray-400">
           © 2023{" "}
           <a href="https://flowbite.com/" class="hover:underline">
-            Flowbite™
+            MealDay
           </a>
           . All Rights Reserved.
         </span>
