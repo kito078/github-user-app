@@ -51,7 +51,7 @@ function MealDetail({ item }) {
           <div className="flex justify-center items-center h-screen">
             <iframe
               className="w-full h-3/4"
-              src={`https://www.youtube.com/embed/${strYoutube}`} // Use the video ID
+              src="https://www.youtube.com/embed/MWzxDFRtVbc" // Use the video ID
               title="YouTube Video"
               allowFullScreen
             ></iframe>
